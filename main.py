@@ -18,10 +18,10 @@ remote_link = "https://github.com/spring-projects/spring-amqp"
 local_link = "../spring-amqp"
 if not os.path.isdir(local_link):
     Repo.clone_from(remote_link, local_link, progress=Progress())
-fixing_commit = "f8e7732ce69e5f3e591700bebbf00682ce7ab231"
+fixing_commit = "444b74e95bb299af5e23ebf006fbb45d574fb95"
 print("\nAnalyse repo: %s\nfixing commit: %s" % (remote_link, fixing_commit))
 vcc = identify.git_identify(local_link, fixing_commit)
-print("VCC: %s" % vcc)
+print("3.(e) VCC: %s" % vcc)
 compare.git_compare(local_link, fixing_commit, vcc)
 # test_blame.git_test_blame(local_link, fixing_commit)
 
@@ -33,7 +33,7 @@ if not os.path.isdir(local_link):
 fixing_commit = "4fa98533358c106522cd1bfe4cd9be2532af852"
 print("\nAnalyse repo: %s\nfixing commit: %s" % (remote_link, fixing_commit))
 vcc = identify.git_identify(local_link, fixing_commit)
-print("VCC: %s" % vcc)
+print("3.(e) VCC: %s" % vcc)
 compare.git_compare(local_link, fixing_commit, vcc)
 # test_blame.git_test_blame(local_link, fixing_commit)
 
@@ -45,7 +45,7 @@ if not os.path.isdir(local_link):
 fixing_commit = "ec10b8c785d1db91fe58946436f854dde04410fd"
 print("\nAnalyse repo: %s\nfixing commit: %s" % (remote_link, fixing_commit))
 vcc = identify.git_identify(local_link, fixing_commit)
-print("VCC: %s" % vcc)
+print("3.(e) VCC: %s" % vcc)
 compare.git_compare(local_link, fixing_commit, vcc)
 # test_blame.git_test_blame(local_link, fixing_commit)
 
@@ -57,7 +57,7 @@ if not os.path.isdir(local_link):
 fixing_commit = "e246e5fc13307da0a5d3bbf860d64d97be1c40f8"
 print("\nAnalyse repo: %s\nfixing commit: %s" % (remote_link, fixing_commit))
 vcc = identify.git_identify(local_link, fixing_commit)
-print("VCC: %s" % vcc)
+print("3.(e) VCC: %s" % vcc)
 compare.git_compare(local_link, fixing_commit, vcc)
 # test_blame.git_test_blame(local_link, fixing_commit)
 
@@ -69,7 +69,7 @@ if not os.path.isdir(local_link):
 fixing_commit = "340569b8f4e14a4cb61a9407ed2d9aa4a20bdf49"
 print("\nAnalyse repo: %s\nfixing commit: %s" % (remote_link, fixing_commit))
 vcc = identify.git_identify(local_link, fixing_commit)
-print("VCC: %s" % vcc)
+print("3.(e) VCC: %s" % vcc)
 compare.git_compare(local_link, fixing_commit, vcc)
 # test_blame.git_test_blame(local_link, fixing_commit)
 
@@ -81,6 +81,6 @@ if not os.path.isdir(local_link):
 fixing_commit = "8f4799b5bc5ed0fe62d6e018c45d960e3652373e"
 print("\nAnalyse repo: %s\nfixing commit: %s" % (remote_link, fixing_commit))
 vcc = identify.git_identify(local_link, fixing_commit)
-print("VCC: %s" % vcc)
+print("3.(e) VCC: %s" % vcc)
 compare.git_compare(local_link, fixing_commit, vcc)
 # test_blame.git_test_blame(local_link, fixing_commit)

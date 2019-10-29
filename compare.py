@@ -2,61 +2,49 @@
 # 26/Oct/2019
 
 from git import Repo
+import re
 
 # Function of git commands to compare two commits
 def git_compare(local_link, fixing_commit, vcc):
     # Create repo object
     repo = Repo(local_link)
 
-    # VCC:
-    # Affected files
-    files_vcc = repo.git.show('--name-only', '--format=', vcc).splitlines()
-    print("Affected files in VCC: %d" % len(files_vcc))
-    # for file in files_vcc:
-    #     print("     %s" % (file))
-
-    # Fixing commit:
-    # Affected files
+    # Affected files of the fixing commit
     files_fix = repo.git.show('--name-only', '--format=', fixing_commit).splitlines()
-    print("Affected files in fixing commit: %d" % len(files_fix))
-    # for file in files_fix:
-    #     print("     %s" % (file))
+    print("3.(d) Affected files in the fixing commit: %d" % len(files_fix))
+    for file in files_fix:
+         print("     %s" % (file))
 
-    # Find the fixed files
-    files_target = list(set(files_vcc).intersection(set(files_fix)))
-    if len(files_target) == 0:
-        print("No common files found.")
+    # Is the current VCC an initial commit?
+    is_initial = repo.git.show('--name-only', vcc + "~")
+    try:
+        repo.git.show('--name-only', '--format=', vcc+"~")
+    except:
+        print("4.(a) The current VCC is an initial commit.")
     else:
-        print("Fixed file: %d" % len(files_target))
-        for file in files_target:
-            print("     %s" % (file))
+        print("4.(a) Previous commit of the VCC found, the current VCC is not an initial commit.")
 
-        # Number of days between two commit
-        print("Number of days between vcc and fixing commit")
-        total_days = 0
-        for file in files_target:
-            vcc_time = repo.git.log(-1, '--format=%ct', vcc, file).splitlines()[0]
-            fixing_time = repo.git.log(-1, '--format=%ct', fixing_commit, file).splitlines()[0]
-            # convert unit from seconds to days
-            days = (float(fixing_time) - float(vcc_time)) / (60 * 60 * 24)
-            total_days += days
-            print("     %s: %.2f" % (file, days))
-        avg_days = total_days / len(files_target)
-        print("     The average number of days between two commits: %.2f" % avg_days)
+    # Is the same developer? Their experience?
+    vcc_author = repo.git.log(-1, '--format=%aN', vcc).splitlines()[0]
+    commits_time = len(re.findall(vcc_author,repo.git.log('--format=%aN')))
+    print("4.(b) Developer(s): ")
+    print("      The developer of the VCC: %s, Number of commits has made: %d" % (vcc_author, commits_time))
+    fixing_author = repo.git.log(-1, '--format=%aN', fixing_commit).splitlines()[0]
+    commits_time = len(re.findall(fixing_author, repo.git.log('--format=%aN')))
+    print("      The developer of the fixing commit: %s, Number of commits has made: %d" % (fixing_author, commits_time))
+    if vcc_author == fixing_author:
+        print("      --> The same developer.")
+    else:
+        print("      --> Different developers.")
 
-        # Is the same developer?
-        print("Developers who have modified each file: ")
-        total_authors = 0
-        for file in files_target:
-            vcc_authors = repo.git.log(-1, '--follow', '--format=%aN', vcc, file).splitlines()
-            vcc_authors.sort()
-            fixing_authors = repo.git.log(-1, '--follow', '--format=%aN', fixing_commit, file).splitlines()
-            fixing_authors.sort()
-            print("     file: %s " % file)
-            print("          Developers of VCC: %s " % vcc_authors)
-            print("          Developers of fixing_commit: %s " % fixing_authors)
-            target_authors = list(set(vcc_authors).intersection(set(fixing_authors)))
-            if len(target_authors) == 0:
-                print("     Different developers.")
-            else:
-                print("     Same developer(s).")
+    # Number of days between two commit
+    vcc_time = repo.git.log(-1, '--format=%ct', vcc).splitlines()[0]
+    fixing_time = repo.git.log(-1, '--format=%ct', fixing_commit).splitlines()[0]
+    # convert unit from seconds to days
+    days = (float(fixing_time) - float(vcc_time)) / (60 * 60 * 24)
+    print("4.(c) The number of days between the VCC and the fixing commit: %.2f" % days)
+
+    if days <=1:
+        print("      The VCC is fixed immediately.")
+    else:
+        print("      The VCC is not fixed immediately.")
