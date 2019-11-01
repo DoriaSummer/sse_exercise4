@@ -1,134 +1,193 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
-{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww12200\viewh15240\viewkind1
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+/usr/local/bin/python3.7 /Users/zuowuli/Workspace/sse_exercise/main.py
 
-\f0\fs24 \cf0 /usr/local/bin/python3.7 /Users/zuowuli/Workspace/sse_exercise/main.py\
-\
-Analyse repo: https://github.com/spring-projects/spring-amqp\
-fixing commit: 444b74e95bb299af5e23ebf006fbb45d574fb95\
-3.(e) VCC: 127d6aabc\
-3.(d) Affected files in the fixing commit: 3\
-     build.gradle\
-     spring-rabbit/src/main/java/org/springframework/amqp/rabbit/connection/RabbitConnectionFactoryBean.java\
-     src/reference/asciidoc/whats-new.adoc\
-4.(a) Previous commit of the VCC found, the current VCC is not an initial commit.\
-4.(b) Developer(s): \
-      The developer of the VCC: Zachary DeLuca, Number of commits has made: 1\
-      The developer of the fixing commit: Gary Russell, Number of commits has made: 623\
-      --> Different developers.\
-4.(c) The number of days between the VCC and the fixing commit: 284.94\
-      The VCC is not fixed immediately.\
-\
-Analyse repo: https://github.com/apache/pdfbox\
-fixing commit: 4fa98533358c106522cd1bfe4cd9be2532af852\
-3.(e) VCC: 0043363995\
-3.(d) Affected files in the fixing commit: 1\
-     pdfbox/src/main/java/org/apache/pdfbox/cos/COSArray.java\
-4.(a) Previous commit of the VCC found, the current VCC is not an initial commit.\
-4.(b) Developer(s): \
-      The developer of the VCC: Jukka Zitting, Number of commits has made: 236\
-      The developer of the fixing commit: Tilman Hausherr, Number of commits has made: 3853\
-      --> Different developers.\
-4.(c) The number of days between the VCC and the fixing commit: 3652.11\
-      The VCC is not fixed immediately.\
-\
-Analyse repo: https://github.com/apache/tomcat80\
-fixing commit: ec10b8c785d1db91fe58946436f854dde04410fd\
-3.(e) VCC: 85a546bbf3\
-3.(d) Affected files in the fixing commit: 9\
-     java/org/apache/coyote/AbstractProtocol.java\
-     java/org/apache/coyote/http11/Http11AprProcessor.java\
-     java/org/apache/coyote/http11/Http11Nio2Processor.java\
-     java/org/apache/coyote/http11/Http11NioProcessor.java\
-     java/org/apache/tomcat/util/net/AprEndpoint.java\
-     java/org/apache/tomcat/util/net/Nio2Endpoint.java\
-     java/org/apache/tomcat/util/net/NioEndpoint.java\
-     java/org/apache/tomcat/util/net/SendfileKeepAliveState.java\
-     webapps/docs/changelog.xml\
-4.(a) Previous commit of the VCC found, the current VCC is not an initial commit.\
-4.(b) Developer(s): \
-      The developer of the VCC: Remy Maucherat, Number of commits has made: 641\
-      The developer of the fixing commit: Mark Thomas, Number of commits has made: 10186\
-      --> Different developers.\
-4.(c) The number of days between the VCC and the fixing commit: 990.98\
-      The VCC is not fixed immediately.\
-\
-Analyse repo: https://github.com/apache/tomcat\
-fixing commit: e246e5fc13307da0a5d3bbf860d64d97be1c40f8\
-3.(e) VCC: bcefe58374c\
-3.(d) Affected files in the fixing commit: 2\
-     java/org/apache/tomcat/util/http/fileupload/FileItem.java\
-     java/org/apache/tomcat/util/http/fileupload/disk/DiskFileItem.java\
-4.(a) Previous commit of the VCC found, the current VCC is not an initial commit.\
-4.(b) Developer(s): \
-      The developer of the VCC: Mark Emlyn David Thomas, Number of commits has made: 6483\
-      The developer of the fixing commit: Mark Emlyn David Thomas, Number of commits has made: 6483\
-      --> The same developer.\
-4.(c) The number of days between the VCC and the fixing commit: 1251.59\
-      The VCC is not fixed immediately.\
-\
-Analyse repo: https://github.com/apache/ignite\
-fixing commit: 340569b8f4e14a4cb61a9407ed2d9aa4a20bdf49\
-3.(e) VCC: bdbba0ee9a5\
-3.(d) Affected files in the fixing commit: 35\
-     modules/core/src/main/java/org/apache/ignite/IgniteSystemProperties.java\
-     modules/core/src/main/java/org/apache/ignite/internal/ClassSet.java\
-     modules/core/src/main/java/org/apache/ignite/internal/GridKernalContextImpl.java\
-     modules/core/src/main/java/org/apache/ignite/internal/IgniteKernal.java\
-     modules/core/src/main/java/org/apache/ignite/internal/MarshallerContextImpl.java\
-     modules/core/src/main/java/org/apache/ignite/internal/client/marshaller/optimized/GridClientOptimizedMarshaller.java\
-     modules/core/src/main/java/org/apache/ignite/internal/marshaller/optimized/OptimizedMarshallerUtils.java\
-     modules/core/src/main/java/org/apache/ignite/internal/marshaller/optimized/OptimizedObjectInputStream.java\
-     modules/core/src/main/java/org/apache/ignite/internal/marshaller/optimized/OptimizedObjectOutputStream.java\
-     modules/core/src/main/java/org/apache/ignite/internal/processors/cache/persistence/wal/reader/StandaloneGridKernalContext.java\
-     modules/core/src/main/java/org/apache/ignite/internal/processors/platform/utils/PlatformUtils.java\
-     modules/core/src/main/java/org/apache/ignite/internal/processors/rest/protocols/tcp/GridTcpRestParser.java\
-     modules/core/src/main/java/org/apache/ignite/internal/processors/rest/protocols/tcp/GridTcpRestProtocol.java\
-     modules/core/src/main/java/org/apache/ignite/internal/util/IgniteUtils.java\
-     modules/core/src/main/java/org/apache/ignite/marshaller/MarshallerContext.java\
-     modules/core/src/main/java/org/apache/ignite/marshaller/MarshallerUtils.java\
-     modules/core/src/main/java/org/apache/ignite/marshaller/jdk/JdkMarshaller.java\
-     modules/core/src/main/java/org/apache/ignite/marshaller/jdk/JdkMarshallerObjectInputStream.java\
-     modules/core/src/main/java/org/apache/ignite/spi/discovery/tcp/TcpDiscoverySpi.java\
-     modules/core/src/main/java/org/apache/ignite/stream/StreamAdapter.java\
-     modules/core/src/main/java/org/apache/ignite/stream/socket/SocketStreamer.java\
-     modules/core/src/test/config/class_list_exploit_excluded.txt\
-     modules/core/src/test/config/class_list_exploit_included.txt\
-     modules/core/src/test/java/org/apache/ignite/internal/ClassSetTest.java\
-     modules/core/src/test/java/org/apache/ignite/internal/MarshallerContextLockingSelfTest.java\
-     modules/core/src/test/java/org/apache/ignite/internal/binary/GridBinaryMarshallerCtxDisabledSelfTest.java\
-     modules/core/src/test/java/org/apache/ignite/internal/processors/cache/GridCacheEntryMemorySizeSelfTest.java\
-     modules/core/src/test/java/org/apache/ignite/marshaller/MarshallerContextSelfTest.java\
-     modules/core/src/test/java/org/apache/ignite/marshaller/MarshallerContextTestImpl.java\
-     modules/core/src/test/java/org/apache/ignite/spi/discovery/tcp/DiscoveryUnmarshalVulnerabilityTest.java\
-     modules/core/src/test/java/org/apache/ignite/stream/socket/SocketStreamerUnmarshalVulnerabilityTest.java\
-     modules/core/src/test/java/org/apache/ignite/testframework/junits/GridTestKernalContext.java\
-     modules/core/src/test/java/org/apache/ignite/testsuites/IgniteBasicTestSuite.java\
-     modules/core/src/test/java/org/apache/ignite/testsuites/IgniteSpiDiscoverySelfTestSuite.java\
-     modules/core/src/test/java/org/apache/ignite/testsuites/IgniteStreamSelfTestSuite.java\
-4.(a) Previous commit of the VCC found, the current VCC is not an initial commit.\
-4.(b) Developer(s): \
-      The developer of the VCC: Dmitriy Govorukhin, Number of commits has made: 368\
-      The developer of the fixing commit: Andrey Gura, Number of commits has made: 43\
-      --> Different developers.\
-4.(c) The number of days between the VCC and the fixing commit: 227.61\
-      The VCC is not fixed immediately.\
-\
-Analyse repo: https://github.com/apache/cxf\
-fixing commit: 8f4799b5bc5ed0fe62d6e018c45d960e3652373e\
-3.(e) VCC: be286c70c1e\
-3.(d) Affected files in the fixing commit: 2\
-     core/src/main/java/org/apache/cxf/interceptor/OutgoingChainInterceptor.java\
-     rt/transports/http/src/main/java/org/apache/cxf/transport/http/AbstractHTTPDestination.java\
-4.(a) Previous commit of the VCC found, the current VCC is not an initial commit.\
-4.(b) Developer(s): \
-      The developer of the VCC: Sergey Beryozkin, Number of commits has made: 1899\
-      The developer of the fixing commit: Daniel Kulp, Number of commits has made: 3388\
-      --> Different developers.\
-4.(c) The number of days between the VCC and the fixing commit: 753.18\
-      The VCC is not fixed immediately.\
-\
-Process finished with exit code 0}
+Analyse repo: https://github.com/spring-projects/spring-amqp
+fixing commit: 444b74e95bb299af5e23ebf006fbb45d574fb95
+3.(e) VCC: 127d6aabc
+3.(d) Affected files in the fixing commit: 3
+      build.gradle
+      spring-rabbit/src/main/java/org/springframework/amqp/rabbit/connection/RabbitConnectionFactoryBean.java
+      src/reference/asciidoc/whats-new.adoc
+4.(a) Previous commit of the VCC found, the current VCC is not an initial commit.
+4.(b) Developer(s):
+      The developer of the VCC: Zachary DeLuca, Number of commits has made: 1
+      The developer of the fixing commit: Gary Russell, Number of commits has made: 623
+      --> Different developers.
+4.(c) The number of days between the VCC and the fixing commit: 284.94
+      The VCC is not fixed immediately.
+4.(d) Commits after the VCC:
+      1ddc74f233fdb2d4ba0322fea7e17aa32891fe24 AMQP-784: Fix multi method @RabbitListener
+      1d4b99c4bcad5a8ebcf569270d545b112af01cc1 AMQP-776: More Consumer Events
+      9fbf48a989afd6628712235651932409b54da415 Fix Event Test
+      1abc07e767f92e10624432aea7a5423e2fcdd110 AMQP-785: SMLC Lifecycle fixes
+      cc138bbde8fb0db4d3901045b08dc07a954a6d61 AMQP-789: MPP Javadoc polishing
+      dec63b11a79bc16daeb75409c5e9711ccf97d551 [artifactory-release] Release version 2.0.1.RELEASE
+      895c7b04683c64ca7a308ccd52d4172a27d4d44f [artifactory-release] Next development version
+      86eb43f683f92c1f2fcfaabb5db47b908ee47c0e Fix Sonar false positives
+      dc0bbc4104ee8400d2b5ddb8042e536e843ffade More Sonar Polishing
+      c576b274935c40d9c34266137cacd67287f1860c AMQP-790: Fix after receive MPPs with send/receive
+
+Analyse repo: https://github.com/apache/pdfbox
+fixing commit: 4fa98533358c106522cd1bfe4cd9be2532af852
+3.(e) VCC: 0043363995
+3.(d) Affected files in the fixing commit: 1
+      pdfbox/src/main/java/org/apache/pdfbox/cos/COSArray.java
+4.(a) Previous commit of the VCC found, the current VCC is not an initial commit.
+4.(b) Developer(s):
+      The developer of the VCC: Jukka Zitting, Number of commits has made: 236
+      The developer of the fixing commit: Tilman Hausherr, Number of commits has made: 3853
+      --> Different developers.
+4.(c) The number of days between the VCC and the fixing commit: 3652.11
+      The VCC is not fixed immediately.
+4.(d) Commits after the VCC:
+      dc8ef25fa1a6f9de1c73e3c3479037332a5d6950 PDFBOX-2: Migrate PDFBox sources to Apache
+      d18984f70b1197cbf53e2e3f6472018b26ced7b5 PDFBOX-2: Migrate PDFBox sources to Apache
+      d8915013d5466c6b6a5e2584bcc64e8ce469be7d PDFBOX-2: Migrate PDFBox sources to Apache
+      623a0af37723377676f57213cf74b1a909c23272 Set svn:eol-style, remove trailing spaces
+      5392a1d4ea19beb4aecd0d8d385102d1b408cd44 Set svn:eol-style, remove trailing spaces
+      831055345926ef7eb987ed169de1a36eceb09755 Set svn:eol-style, remove trailing spaces
+      e7b411f94a48ee1c24bc8ce5d9382b85f7a519ed PDFBOX-364: Resolved use of auto-boxing to restore Java 1.4 compatibility.
+      5657e8819eb9c0ec8cd66e15ae8d220db037cc2e First batch of changes to prepare the website.
+      38e6ec5bf11daefc26e73180c57d31133f230ab2 Make site deployable via ForrestBot. See README.txt for instructions.
+      c4c86bb2078cc309454075ddc0f85a0547602e27 Absolute path names won't work since the PDFBox website isn't deployed at the root level of a subdomain.
+
+Analyse repo: https://github.com/apache/tomcat80
+fixing commit: ec10b8c785d1db91fe58946436f854dde04410fd
+3.(e) VCC: a89540b76d
+3.(d) Affected files in the fixing commit: 9
+      java/org/apache/coyote/AbstractProtocol.java
+      java/org/apache/coyote/http11/Http11AprProcessor.java
+      java/org/apache/coyote/http11/Http11Nio2Processor.java
+      java/org/apache/coyote/http11/Http11NioProcessor.java
+      java/org/apache/tomcat/util/net/AprEndpoint.java
+      java/org/apache/tomcat/util/net/Nio2Endpoint.java
+      java/org/apache/tomcat/util/net/NioEndpoint.java
+      java/org/apache/tomcat/util/net/SendfileKeepAliveState.java
+      webapps/docs/changelog.xml
+4.(a) Previous commit of the VCC found, the current VCC is not an initial commit.
+4.(b) Developer(s):
+      The developer of the VCC: Mark Thomas, Number of commits has made: 10186
+      The developer of the fixing commit: Mark Thomas, Number of commits has made: 10186
+      --> The same developer.
+4.(c) The number of days between the VCC and the fixing commit: 746.36
+      The VCC is not fixed immediately.
+4.(d) Commits after the VCC:
+      cccf6f78aec6b7ea08f6bd5379cd7dbbf2e8ac85 Make processing of trailer headers for chunked input optional. Trailer headers to process must be added to the allowedTrailerHeader list or they will be ignored
+      035b6670d984dc6d4c811d3798d6d741a65d414c Treat *.pem files (used in Tomcat test cases) as text. I set svn:eol-style and update "text.files" patterns in build.xml.
+      bb8cf97101027c2f766b8f28f9be24d2864d0ec1 Update link to SPNEGO documentation in Apache Geronimo wiki The old link went 404, as reported by André Warnier on the users@ list.
+      ac1b8b072ed66700fbad1aeb5f9cd442c04fadb7 Defer the initialization of StartTLS settings to the startInternal stage. That way logging is possible and errors in tls/ssl will lead to stopping the context.
+      7a2eb950cfdccb4bc42433abe76bd6da299810e3 Use the right variable for null check; the method variable, that is.
+      2cba2ad4cacbb5197e57360dd4fd2b7f5aa9aade Fix trailing space in comment lines in *.pem files, to make checkstyle happy. Followup to r1666503.
+      3d1a2bb161686246caca796d4fdfcea9fce23ba2 Merged revision 1666637 from tomcat/trunk: Unused type parameter T
+      4210f7699291523d8de3e7ddaf583122053915b7 Fix https://bz.apache.org/bugzilla/show_bug.cgi?id=57704 Merged revision 1666649 from tomcat/trunk: Access instanceManager via get/set methods. Fix potential NPEs. In web app start if a problem occur prior to instanceManager initialization then: - SCI.onStart will fail if it tries to use instanceManager - During web app stop, StandardContext.listenerStop will fail if it tries to use instanceManager
+      88355985104acfc2ed726f805dbb111645006906 Fix https://bz.apache.org/bugzilla/show_bug.cgi?id=57377 Remove the restriction that prevented the use of SSL when specifying a bind address. Enable SSL to be configured for the registry as well as the server.
+      92baa3317df474506833e5e601fdb8256f2e48bf Use the correct capitalisation.
+
+Analyse repo: https://github.com/apache/tomcat
+fixing commit: e246e5fc13307da0a5d3bbf860d64d97be1c40f8
+3.(e) VCC: bcefe58374c
+3.(d) Affected files in the fixing commit: 2
+      java/org/apache/tomcat/util/http/fileupload/FileItem.java
+      java/org/apache/tomcat/util/http/fileupload/disk/DiskFileItem.java
+4.(a) Previous commit of the VCC found, the current VCC is not an initial commit.
+4.(b) Developer(s):
+      The developer of the VCC: Mark Emlyn David Thomas, Number of commits has made: 6483
+      The developer of the fixing commit: Mark Emlyn David Thomas, Number of commits has made: 6483
+      --> The same developer.
+4.(c) The number of days between the VCC and the fixing commit: 1251.59
+      The VCC is not fixed immediately.
+4.(d) Commits after the VCC:
+      5e7ae383f189e2409febfeb9c1f8196a47891956 Test some edge cases with = in cookie values (current code fails these tests - patch to follow shortly)
+      01d825bf74491435c1a55589bcd4d8bd3961af1c Better handle edge cases when allowing = in cookie value
+      4ecee94347289d7feff25329a541f62dc82ff01b Fix an Eclipse warning
+      771ffdbe3de52db374ba63c04ebb2e7f19f102b0 Add support for multipart config in web.xml (partially complete) Review and fix issues in WebXml merge code
+      576bf2bb753784985f100fb7a25f25f63c344ae8 Remove deprecated code
+      30131cb0480d63e911c1f7912a4e45687d2636ab Remove some more deprecated code
+      16db530b7af9969670938b6ab6aba319b7ce6f88 Remove unused imports
+      d750f01655152f35f1d738e6a5b7f52282ccde06 Add @Override annotations
+      8b22089526cad157662152cd5a34eb3dfd0df860 Consolidation of protocol attributes into a base class
+      b5c8c1ce5a3e1f000c400257a8de65d6d9f95bc5 Generics
+
+Analyse repo: https://github.com/apache/ignite
+fixing commit: 340569b8f4e14a4cb61a9407ed2d9aa4a20bdf49
+3.(e) VCC: bdbba0ee9a5
+3.(d) Affected files in the fixing commit: 35
+      modules/core/src/main/java/org/apache/ignite/IgniteSystemProperties.java
+      modules/core/src/main/java/org/apache/ignite/internal/ClassSet.java
+      modules/core/src/main/java/org/apache/ignite/internal/GridKernalContextImpl.java
+      modules/core/src/main/java/org/apache/ignite/internal/IgniteKernal.java
+      modules/core/src/main/java/org/apache/ignite/internal/MarshallerContextImpl.java
+      modules/core/src/main/java/org/apache/ignite/internal/client/marshaller/optimized/GridClientOptimizedMarshaller.java
+      modules/core/src/main/java/org/apache/ignite/internal/marshaller/optimized/OptimizedMarshallerUtils.java
+      modules/core/src/main/java/org/apache/ignite/internal/marshaller/optimized/OptimizedObjectInputStream.java
+      modules/core/src/main/java/org/apache/ignite/internal/marshaller/optimized/OptimizedObjectOutputStream.java
+      modules/core/src/main/java/org/apache/ignite/internal/processors/cache/persistence/wal/reader/StandaloneGridKernalContext.java
+      modules/core/src/main/java/org/apache/ignite/internal/processors/platform/utils/PlatformUtils.java
+      modules/core/src/main/java/org/apache/ignite/internal/processors/rest/protocols/tcp/GridTcpRestParser.java
+      modules/core/src/main/java/org/apache/ignite/internal/processors/rest/protocols/tcp/GridTcpRestProtocol.java
+      modules/core/src/main/java/org/apache/ignite/internal/util/IgniteUtils.java
+      modules/core/src/main/java/org/apache/ignite/marshaller/MarshallerContext.java
+      modules/core/src/main/java/org/apache/ignite/marshaller/MarshallerUtils.java
+      modules/core/src/main/java/org/apache/ignite/marshaller/jdk/JdkMarshaller.java
+      modules/core/src/main/java/org/apache/ignite/marshaller/jdk/JdkMarshallerObjectInputStream.java
+      modules/core/src/main/java/org/apache/ignite/spi/discovery/tcp/TcpDiscoverySpi.java
+      modules/core/src/main/java/org/apache/ignite/stream/StreamAdapter.java
+      modules/core/src/main/java/org/apache/ignite/stream/socket/SocketStreamer.java
+      modules/core/src/test/config/class_list_exploit_excluded.txt
+      modules/core/src/test/config/class_list_exploit_included.txt
+      modules/core/src/test/java/org/apache/ignite/internal/ClassSetTest.java
+      modules/core/src/test/java/org/apache/ignite/internal/MarshallerContextLockingSelfTest.java
+      modules/core/src/test/java/org/apache/ignite/internal/binary/GridBinaryMarshallerCtxDisabledSelfTest.java
+      modules/core/src/test/java/org/apache/ignite/internal/processors/cache/GridCacheEntryMemorySizeSelfTest.java
+      modules/core/src/test/java/org/apache/ignite/marshaller/MarshallerContextSelfTest.java
+      modules/core/src/test/java/org/apache/ignite/marshaller/MarshallerContextTestImpl.java
+      modules/core/src/test/java/org/apache/ignite/spi/discovery/tcp/DiscoveryUnmarshalVulnerabilityTest.java
+      modules/core/src/test/java/org/apache/ignite/stream/socket/SocketStreamerUnmarshalVulnerabilityTest.java
+      modules/core/src/test/java/org/apache/ignite/testframework/junits/GridTestKernalContext.java
+      modules/core/src/test/java/org/apache/ignite/testsuites/IgniteBasicTestSuite.java
+      modules/core/src/test/java/org/apache/ignite/testsuites/IgniteSpiDiscoverySelfTestSuite.java
+      modules/core/src/test/java/org/apache/ignite/testsuites/IgniteStreamSelfTestSuite.java
+4.(a) Previous commit of the VCC found, the current VCC is not an initial commit.
+4.(b) Developer(s):
+      The developer of the VCC: Dmitriy Govorukhin, Number of commits has made: 368
+      The developer of the fixing commit: Andrey Gura, Number of commits has made: 43
+      --> Different developers.
+4.(c) The number of days between the VCC and the fixing commit: 227.61
+      The VCC is not fixed immediately.
+4.(d) Commits after the VCC:
+      6bf5ce46c1e6c4e3dcf042ac91a5b61a726c5821 IGNITE-5267 - Moved ignite-ps module to ignite-core
+      4dc81ca86347107848328d1e2e206b796976fb23 IGNITE-5267 - Added missing class
+      ca6cd142d43a47399c51a586d43c8eab6f82163d ignite-5272 Do not always disable one-phase commit if there is near cache, instead switch to non one-phase mode if there are readers.
+      0879ca88553ac1299fe21bd1e60cf64e3edf4096 IGNITE-5414 Fixed cluster topology serialization.
+      b843f078fa97c6a34dd4bb375c534bfa798bcda2 IGNITE-5460 Added cache group name.
+      195147d573d7cb3fc637f74937ee561b03a3c574 IGNITE-5267 - Activate nodes after start
+      d4f19e7f3977332c1e64465310627167b39a0bdf Fixed failure in IgniteCacheNoClassQuerySelfTest.
+      4df693704eddfeea2899ec7bf6db21304116f648 .NET: Fix TestAsciiChars
+      d38dfcd5c4a49b6ec4be1cfdb4f28f7d152cd14a ignite-5267-merge remove pds dependency, restore data structures only in snapshot operation
+      cf886fd5816534b46a1247d3bdc41061087608e4 ignite-2.1.1 fix java doc
+
+Analyse repo: https://github.com/apache/cxf
+fixing commit: 8f4799b5bc5ed0fe62d6e018c45d960e3652373e
+3.(e) VCC: be286c70c1e
+3.(d) Affected files in the fixing commit: 2
+      core/src/main/java/org/apache/cxf/interceptor/OutgoingChainInterceptor.java
+      rt/transports/http/src/main/java/org/apache/cxf/transport/http/AbstractHTTPDestination.java
+4.(a) Previous commit of the VCC found, the current VCC is not an initial commit.
+4.(b) Developer(s):
+      The developer of the VCC: Sergey Beryozkin, Number of commits has made: 1899
+      The developer of the fixing commit: Daniel Kulp, Number of commits has made: 3388
+      --> Different developers.
+4.(c) The number of days between the VCC and the fixing commit: 753.18
+      The VCC is not fixed immediately.
+4.(d) Commits after the VCC:
+      a4209e39c7299839e6517afb51842688070d7b8a [CXF-4153] Fixing Beanspector wrongly getting the property names in case of 'is'
+      35a39a7b1d1b6109b02b7dbe44f60c3151394e16 [CXF-4153] Adding the missing test file
+      efbe607e0f1d5cfb477f1b38296d90149f38f77a Do not set passwords to the empty String if they are null.  - This is causing the keystore.private.password property of WSS4J to not work
+      f133afbfe582ac0451d601f8b12da64cb5742f32 [CXF-4143] Make the ending interceptor public so the name can easily be accessed.
+      37fe50cd5d7c5a9f3d5c0ab2724926fed1466c56 [CXF-4136] Handle wsdls not as a dependency Patch from Owen Farrell applied
+      eb44c422d0b003d8a7e0d197c77558123cf1c9cf [CXF-4131] Make sure the conduit is only added as a listener once
+      dc90e3449f2ea219796eaedbffe9fba925bed7b2 [CXF-4130] Fix problems with Providers writing bodies into headers Patch from Seumas Soltysik applied
+      da3ea3cb722a8c32a89b5a103ad2346fbf9e61cf Upgrading to WSS4J 1.6.5
+      5511da825cf956f803f8acda6f54bee5b80d6df5 [CXF-4160] - Support signing a SAML token using the requested signature and canonicalization algorithm
+      faadb5887fa92e72f3ce8c103620918421341548 [CXF-3589] Prototyping the skeleton code for supporting saml web sso on the SP side based on Colm's test
+
+Process finished with exit code 0

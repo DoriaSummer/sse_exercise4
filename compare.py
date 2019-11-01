@@ -13,10 +13,9 @@ def git_compare(local_link, fixing_commit, vcc):
     files_fix = repo.git.show('--name-only', '--format=', fixing_commit).splitlines()
     print("3.(d) Affected files in the fixing commit: %d" % len(files_fix))
     for file in files_fix:
-         print("     %s" % (file))
+         print("      %s" % (file))
 
     # Is the current VCC an initial commit?
-    is_initial = repo.git.show('--name-only', vcc + "~")
     try:
         repo.git.show('--name-only', '--format=', vcc+"~")
     except:
@@ -48,3 +47,10 @@ def git_compare(local_link, fixing_commit, vcc):
         print("      The VCC is fixed immediately.")
     else:
         print("      The VCC is not fixed immediately.")
+
+    # Output 10 commits after the VCC
+    # print(vcc_time)
+    commits_after = repo.git.log('--format=oneline', '--reverse', '--after=' + str(int(vcc_time)+1)).splitlines()[0:10]
+    print("4.(d) Commits after the VCC: ")
+    for commit in commits_after:
+        print("      %s" % commit)

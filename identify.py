@@ -103,7 +103,7 @@ def git_identify(local_link, fixing_commit):
 
         # Catch error of new added files
         try:
-            file_blame_info_pre = repo.git.blame('-f', '-e', '-t', fixing_commit + "^", file).splitlines()
+            file_blame_info_pre = repo.git.blame('-wC', '-f', '-e', '-t', fixing_commit + "^", file).splitlines()
         except:
             # print("%s is a new added file." % file)
             continue
@@ -144,12 +144,13 @@ def git_identify(local_link, fixing_commit):
                     # print("Target commit: %s" % target_commit)
 
                     # Count commit * length_add
-                    if target_commit in commits:
-                        index = commits.index(target_commit)
-                        commits_count[index] += length_add
-                    else:
-                        commits.append(target_commit)
-                        commits_count.append(length_add)
+                    if not target_commit == 'skip':
+                        if target_commit in commits:
+                            index = commits.index(target_commit)
+                            commits_count[index] += length_add
+                        else:
+                            commits.append(target_commit)
+                            commits_count.append(length_add)
 
     # Find most frequently identified commit as the VCC
     # print("All commits: %s" % commits)

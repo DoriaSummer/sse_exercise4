@@ -15,9 +15,8 @@ def git_test_blame(local_link, fixing_commit):
     repo.git.reset('--hard', fixing_commit)
 
     # Compare results of different git.blame parameters
-    # '-wCCC' is ignored because of the error: fatal: bad revision '–wCCC'
 
-    parameters = ['-w', '-wM', '-wC', '-wCC']
+    parameters = ['-w', '-wM', '-wC', '-wCC', '-wCCC']
 
     for parameter in parameters:
 
@@ -79,12 +78,13 @@ def git_test_blame(local_link, fixing_commit):
                         # print("Target commit: %s" % target_commit)
 
                         # Count commit * length_add
-                        if target_commit in commits:
-                            index = commits.index(target_commit)
-                            commits_count[index] += length_add
-                        else:
-                            commits.append(target_commit)
-                            commits_count.append(length_add)
+                        if not target_commit == 'skip':
+                            if target_commit in commits:
+                                index = commits.index(target_commit)
+                                commits_count[index] += length_add
+                            else:
+                                commits.append(target_commit)
+                                commits_count.append(length_add)
 
         # Find most frequently identified commit as the VCC
         vcc = commits[commits_count.index(max(commits_count))]
